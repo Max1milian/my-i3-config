@@ -154,6 +154,8 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 #assigning several programs to their workspace
 assign [class="kitty"] $ws1
+assign [class="firefox"] $ws2
+assign [class="Spotify"] $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -196,4 +198,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
-
+exec kitty --start-as=fullscreen
+exec firefox
+exec spotify
