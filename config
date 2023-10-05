@@ -198,6 +198,10 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+#launching programs at startup
 exec kitty --start-as=fullscreen
 exec firefox
 exec spotify
+
+#setting the custom background
+exec_always feh --bg-scale /home/$USER/Bilder/
