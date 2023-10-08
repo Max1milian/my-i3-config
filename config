@@ -45,11 +45,11 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
+# or left-clicking anywhere into the window while holding the floating modifier. 
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty 
 
 #change this once this config is used outside of the virtual machine
 #bindsym $mod+Return exec kitty 
@@ -156,6 +156,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 assign [class="kitty"] $ws1
 assign [class="firefox"] $ws2
 assign [class="Spotify"] $ws10
+assign [class="discord"] $ws3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -202,6 +203,7 @@ bar {
 exec kitty --start-as=fullscreen
 exec firefox
 exec spotify
+exec discord
 
 #setting the custom background
 exec_always feh --bg-scale /home/$USER/Bilder/
